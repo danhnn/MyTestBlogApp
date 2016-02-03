@@ -1,3 +1,198 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.features .glyphicon {
+	font-size: 32px;
+
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+@media (min-width: 992px) {
+
+	body{
+		background : #272622;
+	}
+
+    body.custom-bg{
+		background-image: url("bgLeft.jpg"); 
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top left;
+	}
+
+	.div-post-image{
+		position: relative;
+		height: 200px;
+	}
+
+	.fix-height-center{
+		position:absolute;
+		top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+		margin: auto;
+
+	    max-height: 200px;
+	}
+
+	.post{
+		padding: 20px;
+	}
+
+	.right-section{
+		background: #ffffff;
+  		overflow-y: auto; 
+  		overflow-x: hidden;
+  	
+	}
+
+}
+
+@media (max-width: 992px) {
+	.right-section{
+		background: #ffffff;
+  	
+	}
+
+    .div-post-image{
+    	position: relative;
+		height: 400px;
+	}
+
+	.fix-height-center{
+		position:absolute;
+		top: 0;
+	    bottom: 0;
+		margin: auto;
+		min-height: 200px;
+	    max-height: 330px;
+	}
+
+	.post{
+		padding: 20px 40px 20px 40px;
+	}
+}
+
+
+
+.body-row{
+
+}
+
+.left-section{
+	background: #ffffff;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.post .post-summary{
+	height: 80px;
+}
+
+.front-div{
+	position: relative;
+	background-image: url("front.jpg"); 
+	width: 900px;
+	height: 510px;
+}
+
+.font-div-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.85;
+    background: #333;
+}
+
+.content-front{
+	color: white;
+	position: absolute;
+	left: 20%;
+	top : 30%;
+}
+
+.logo{
+	margin-top: 30px;
+}
+
+.navbar{
+	background-color: white;
+}
+
+.navbar-collapse li a{
+  color: gray;
+}
+
+.navbar-collapse{
+	border: 1px dotted #ddd9d6;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.subcribe-section{
+	border-top: 1px dotted #ddd9d6;
+	border-bottom: 1px dotted #ddd9d6;
+	margin-bottom: 30px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.profile-section{
+	margin-bottom: 30px;
+}
+
+.recent-section{
+
+}
+
+.green-bt{
+	background-color: #98B84C;
+	color: white;
+	font-weight: bold;
+	padding: 10px 30px 10px 30px;
+}
+
+.bt-subcribe{
+	margin-top: 10px;
+	
+}
+
+.profileIMG{
+
+
+}
+
+.parent-width {
+	 max-width: 100%;
+}
+
+
+.footer {
+	height: 140px;
+	background-color: #333333;
+	color:white;
+	text-align: center;
+	padding-top: 40px;
+}
+
+.bt-new-article {
+	background-color: #42B97D;
+	margin-top: 10px;
+	font-weight: bold;
+	color: white;
+	padding: 10px 30px 10px 30px;
+}
