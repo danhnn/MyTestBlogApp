@@ -178,15 +178,10 @@
           }
   }
 
-  function makeSummaryPost(){
-  	   $('.post-summary').each(function(){
-            var textToHide = $(this).text().substring(0,100) + "...";
-            $(this).html(textToHide);
-          })
-     
-       $('.post-title').each(function(){
-      		if( $(this).text().length > 30 ){
-            	var textToHide = $(this).text().substring(0,30) + "...";
+  function makeSummaryParagraph(className,limitChar){
+  	$(className).each(function(){
+      		if( $(this).text().length > limitChar ){
+            	var textToHide = $(this).text().substring(0,limitChar) + "...";
             		$(this).html(textToHide);
           		}
   			})
@@ -201,8 +196,8 @@
 	    });
 
 	  	//createDummyPost();
-		makeSummaryPost();     
-	  
+		makeSummaryParagraph('.post-summary',100);     
+	    makeSummaryParagraph('.post-title',30);  
 	})
 
   </script>
