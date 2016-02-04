@@ -3,7 +3,7 @@
 <div class="post col-md-12">
   
               <div class="row">
-                <%= image_tag("blog2.jpg", class: "parent-width") %>
+                <%= image_tag(@article.feature, class: "parent-width") %>
               </div>
               
               <h2 class="row"><%= @article.title %></h2>
@@ -11,4 +11,5 @@
 
               <div class="row"><p><%= @markdown.render(@article.body).html_safe %></p></div>
                     
+			  <%= link_to 'Back', articles_path %>
 </div>

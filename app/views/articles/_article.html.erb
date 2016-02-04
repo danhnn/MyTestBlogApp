@@ -3,7 +3,7 @@
 <div class="post col-md-6">
               <%= link_to (article) do %>
               <div class="div-post-image">
-                <%= image_tag("blog2.jpg", class: "parent-width fix-height-center") %>
+                <%= image_tag(article.feature, class: "parent-width fix-height-center") %>
               </div>
               
               <h2 class="post-title"><%= article.title %></h2>

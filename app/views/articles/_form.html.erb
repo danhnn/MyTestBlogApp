@@ -19,7 +19,37 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
+   <div class="field">
+    <%= f.label :'feature' %><br>
+    <%= f.text_field :feature %>
+    <a href="#" onClick="randomFeatureImage()">Random Images</a>
+  </div>
+
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+     <% if action_name === "edit" %>
+      <input type="hidden" id="action_type" value="edit">
+     <% else %>
+      <input type="hidden" id="action_type" value="new"> 
+     <% end %>
 <% end %>
+
+
+<script type="text/javascript">
+  function randomFeatureImage(){
+    var number = 2 + Math.floor(Math.random() * 3);
+    $('#article_feature').val("blog" + number + ".jpg");
+  }
+
+  $(document).ready(function(){
+    if($('#action_type').val() == "new"){
+      randomFeatureImage();
+    }
+  })
+
+  
+
+</script>

@@ -17,10 +17,12 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    render 'index'
   end
 
   # GET /articles/1/edit
   def edit
+    render 'index'
   end
 
   # POST /articles
@@ -71,6 +73,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :feature)
     end
 end
