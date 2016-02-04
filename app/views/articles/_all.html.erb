@@ -1,0 +1,21 @@
+ <div class="front-div parent-width">
+    <!-- Front page -->
+      <div class="font-div-mask">
+        <div class="content-front">
+          <h2>Front Page</h2>
+          <br><br>
+          <p>Life is a journey! Travel and explore the world, taste the exotic cuisine, discover new fashion trends and share your experiences with the rest of the world. Amalie is a blogging theme with modern and distinctive design combined with equally appealing typography and features.</p>
+          <br><br>
+          <button class="btn green-bt btn-md">READ MORE</button>
+        </div>
+      </div>
+  </div>
+
+  
+   <%= link_to 'New Article', new_article_path , class: 'bt-new-article btn btn-md'%>
+ 
+  <div class="row list-post-div">
+    <!-- List of post -->
+    <%= render @articles %> 
+ 
+</div>
