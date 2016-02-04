@@ -88,31 +88,12 @@
     </div>
 
   
-    <button class="bt-new-article btn btn-md"> New Article </button>
+   <%= link_to 'New Article', new_article_path , class: 'bt-new-article btn btn-md'%>
+ 
 
     <div class="row list-post-div">
     <!-- List of post -->
-      <div class="col-md-6 posts-left">
-        <div class="post">
-          <div class="div-post-image">
-            <%= image_tag("small.jpg", class: "parent-width fix-height-center") %>
-          </div>
-          <h2 class="post-title">Vegeterian Life</h2>
-          <p class="post-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quam consequatur, totam adipisci alias perspiciatis, quidem sapiente at sunt aperiam.em ipsum dolor sit amet, consectetur adipisicing elit. Quos quam consequatur, totam adipisci alias perspiciatis, quidem sapiente at sunt aperiaem ipsum dolor sit amet, consectetur adipisicing elit. Quos quam consequatur, totam adipisci alias perspiciatis, quidem sapiente at sunt aperia</p>
-          <button class="btn btn-primary">Edit</button>
-          <button class="btn btn-warning">Delete</button>
-          
-        </div>
-
-      
-      </div>
-
-      <div class="col-md-6 posts-right">
-        
-
-      </div>
-
-      
+    	<%= render @articles %> 
     </div>
 
   </div>
@@ -174,16 +155,8 @@
            }, 100);
   }
 
-    $(document).ready(function(){
-        
-        gridResizeForRefresh();
-    
-        $( window ).resize(function() {
-          handleGridResize();
-        });
-
-      
-        for (i = 0; i < 2 ; i ++) {
+  function createDummyPost(){
+  	 for (i = 0; i < 2 ; i ++) {
           var number = 2 + Math.floor(Math.random() * 3);
           var imageLink = "blog"+ number +".jpg";
 
@@ -203,16 +176,28 @@
             $(".posts-left").append(objectToAppend);
             $(".posts-right").append(objectToAppend);
           }
+  }
 
-
-          $('.post-summary').each(function(){
-            var textToHide = $(this).text().substring(1,100) + "...";
+  function makeSummaryPost(){
+  	   $('.post-summary').each(function(){
+            var textToHide = $(this).text().substring(0,100) + "...";
             $(this).html(textToHide);
           })
       
-        
+  }
 
-    })
+	$(document).ready(function(){
+	    
+	    gridResizeForRefresh();
+
+	    $( window ).resize(function() {
+	      handleGridResize();
+	    });
+
+	  	//createDummyPost();
+		makeSummaryPost();     
+	  
+	})
 
   </script>
 </body>
