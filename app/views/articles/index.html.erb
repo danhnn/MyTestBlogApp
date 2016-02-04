@@ -183,7 +183,13 @@
             var textToHide = $(this).text().substring(0,100) + "...";
             $(this).html(textToHide);
           })
-      
+     
+       $('.post-title').each(function(){
+      		if( $(this).text().length > 30 ){
+            	var textToHide = $(this).text().substring(0,30) + "...";
+            		$(this).html(textToHide);
+          		}
+  			})
   }
 
 	$(document).ready(function(){
