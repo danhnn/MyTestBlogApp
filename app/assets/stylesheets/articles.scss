@@ -104,6 +104,11 @@ body{
     display: none; 
 }
 
+.front-content{
+	padding-right : 20px;
+	font-size: 17px;
+}
+
 .post .post-title{
 	color:black;
 	height: 80px;	
@@ -133,8 +138,8 @@ body{
 .content-front{
 	color: white;
 	position: absolute;
-	left: 20%;
-	top : 30%;
+	left: 12%;
+	top : 15%;
 }
 
 .logo{
@@ -196,7 +201,8 @@ body{
 .footer {
 	height: 140px;
 	background-color: #333333;
-		text-align: center;
+	color:white;
+	text-align: center;
 	padding-top: 40px;
 }
 
@@ -206,4 +212,9 @@ body{
 	font-weight: bold;
 	color: white;
 	padding: 10px 30px 10px 30px;
+}
+
+.list-post-div{
+	padding-left: 80px;
+	padding-right: 80px;
 }
