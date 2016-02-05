@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+  font-family: 'Noto Sans';
+  src:url(asset-path('fonts/NotoSans-Regular.ttf'));
+}
 
 .features .glyphicon {
 	font-size: 32px;
@@ -11,6 +15,10 @@
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
+}
+
+body{
+	font-family: 'Noto Sans';
 }
 
 @media (min-width: 992px) {
