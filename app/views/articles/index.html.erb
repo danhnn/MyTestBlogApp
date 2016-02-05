@@ -9,7 +9,9 @@
   <div class="left-section col-md-3 col-md-offset-2">
     <div class="row">
     <!-- logo -->
+    <%= link_to "/articles" do %>
       <%= image_tag("logo2.png", class: "logo parent-width") %>
+    <% end %>
     </div>
 
     <div  class="row navbar navbar-default navbar-static-top">
@@ -25,10 +27,10 @@
       </div>
 
       <ul class="nav collapse navbar-collapse">
-          <li><a href='#'><b>Home</b></a></li>
+          <li><%= link_to "Home", :controller => :articles, :action => :index %></li>
           <li><%= link_to "About", :controller => :articles, :action => :about %></li>    
-         
-          <li><a href='#'>Blog</a></li>
+          <li><%= link_to "Blogs", :controller => :articles, :action => :index %></li>  
+
           <li><a href='#' data-toggle='dropdown'>Contact <span class='caret'></span> </a>
             <ul class='dropdown-menu'>
               <li><a href='#'>Facebook</a></li>
