@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    increaseHitCount()
     showInfoInHomePage()
   end
 
@@ -33,6 +34,11 @@ class ArticlesController < ApplicationController
   # GET /about
   def about
     showInfoInHomePage()
+  end
+
+  def increaseHitCount
+    @article.hit =  @article.hit.to_i + 1 
+    @article.save
   end
 
   def showInfoInHomePage
