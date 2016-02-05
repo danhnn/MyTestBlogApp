@@ -2,25 +2,22 @@
 
 <div class="post col-md-12">
   
-              <div class="row">
-                <%= image_tag(@article.feature, class: "parent-width") %>
-              </div>
-              
-              <h2 class="row"><%= @article.title %></h2>
-           
+      <div class="row">
+        <%= image_tag(@article.feature, class: "parent-width") %>
+      </div>
+      
+      <h2 class="row"><%= @article.title %></h2>
+   
 
-              <div class="row"><p><%= @markdown.render(@article.body).html_safe %></p></div>
-                    
-			  <%= link_to 'Back', articles_path, class: "row btn btn-info" %>
+      <div class="row"><p><%= @markdown.render(@article.body).html_safe %></p></div>
+            
+	  <%= link_to 'Back', articles_path, class: "row btn btn-info" %>
 
+<div class="row">
+	<h3>Comments:</h3>
+	<%= render @article.comments %>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-
-			  <h2>Add a comment:</h2>
-<%= render "comments/form" %>
-
-
+	<%= render "comments/form" %>
+</div>
 
 </div>
