@@ -1,0 +1,24 @@
+
+<div class='col-md-8 col-sm-8 col-xs-8' style='padding-left:50px'>
+
+  			 <div class='row'>
+           
+              <%= image_tag('profile1.jpg', class: "parent-width") %>
+           	</div>
+              <h2 class="row">Harry Nguyễn</h2>
+         
+              <div class="row"><p><%= @markdown.render("FullName: **Nguyễn Ngọc Danh**    
+               Birthday: **22/10/1988**   
+               National: **VietNam**  
+               <br>
+               <img src='/assets/flag.png' style='width:20%' />
+               <br>
+               <blockquote>
+               Nice to meet you guy! I will try my best to do the great thing with Rails!   
+               This is my first website I made by Ruby on Rails. For me, Rails is very sexy. It has a very good MVC Structure and very easy to do anything!</blockquote>"
+               	).html_safe %></p></div>
+                    
+              <br>
+			  <%= link_to 'Back', articles_path, class: "row btn btn-info" %>
+ 	
+</div>

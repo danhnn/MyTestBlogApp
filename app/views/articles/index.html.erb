@@ -26,7 +26,8 @@
 
       <ul class="nav collapse navbar-collapse">
           <li><a href='#'><b>Home</b></a></li>
-          <li><a href='#'>About</a></li>
+          <li><%= link_to "About", :controller => :articles, :action => :about %></li>    
+         
           <li><a href='#'>Blog</a></li>
           <li><a href='#' data-toggle='dropdown'>Contact <span class='caret'></span> </a>
             <ul class='dropdown-menu'>
@@ -57,7 +58,7 @@
     <div class="row profile-section hidden-sm hidden-xs">
     <!-- Image and quote -->
       <%= image_tag("quote.png", class: "profileIMG parent-width") %>
-      <p>Live as if you dive tommorow and learn as if you live forever!</p>
+      <p>Live as if you were die tommorow and learn as if you live forever!</p>
     </div>
 
     <div class="row recent-section hidden-sm hidden-xs">
@@ -84,6 +85,8 @@
       <%= render 'new' %> 
       <% when 'edit' %>
       <%= render 'edit' %> 
+       <% when 'about' %>
+      <%= render 'about' %> 
       <% end %>
 
   </div>

@@ -10,8 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    render 'index'
+    showInfoInHomePage()
   end
 
   # GET /articles/new
@@ -22,6 +21,15 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    render 'index'
+  end
+
+  def about
+    showInfoInHomePage()
+  end
+
+  def showInfoInHomePage
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     render 'index'
   end
 
