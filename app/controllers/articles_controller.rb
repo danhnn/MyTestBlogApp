@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    getRecentArticle()
   end
 
   # GET /articles/1
@@ -16,21 +17,27 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
-    render 'index'
+    showInfoInHomePage()
   end
 
   # GET /articles/1/edit
   def edit
-    render 'index'
+    showInfoInHomePage()
   end
 
+  # GET /about
   def about
     showInfoInHomePage()
   end
 
   def showInfoInHomePage
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    getRecentArticle()
     render 'index'
+  end
+
+  def getRecentArticle
+    @recents = Article.last(5).reverse
   end
 
   # POST /articles

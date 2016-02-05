@@ -48,11 +48,11 @@
 
     <div class="row subcribe-section hidden-sm hidden-xs">
     <!-- Subcribe -->
-      <h3>SUBSCRIBE TO BLOG VIA EMAIL</h3>
-      <br>
+      <b>SUBSCRIBE TO BLOG VIA EMAIL</b>
+      <br><br>
       <p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.<p>
       <br>
-      <input type="text" name="firstname">
+      <input type="text" name="email" placeholder="Email Address">
       <br><br>
       <button class="bt-subcribe green-bt btn btn-md">SUBCRIBE</button>
     </div>
@@ -66,13 +66,14 @@
 
     <div class="row recent-section hidden-sm hidden-xs">
     <!-- Recent post -->
-      <h4>RECENT POSTS</h4>
-      <ul class="list-unstyled">
-        <li>Recent Post 1</li>
-        <li>Recent Post 2</li>
-        <li>Recent Post 3</li>
-        <li>Recent Post 4</li>
-        <li>Recent Post 5</li>
+      <b>RECENT POSTS</b>
+      <br><br>
+      <ul class="recent-list list-unstyled">
+        <% @recents.each do |r| %>
+          <%= link_to (r) do %>
+            <li> <%= r.title %></li>
+          <% end %>
+        <% end %>
       </ul>
     </div>
   </div>
