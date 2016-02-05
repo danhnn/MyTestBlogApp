@@ -14,9 +14,10 @@
       </div>
   </div>
 
-  
-   <%= link_to 'New Article', new_article_path , class: 'bt-new-article btn btn-md'%>
- 
+<div class='row'>
+  <%= render 'search' %> 
+</div>
+
   <div class="row list-post-div">
     <!-- List of post -->
     <%= render @articles %> 
