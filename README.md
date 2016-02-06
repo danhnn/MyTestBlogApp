@@ -4,7 +4,7 @@
 
 Submitted by: **Nguyễn Ngọc Danh**
 
-Time spent: **24** hours spent in total
+Time spent: **32** hours spent in total
 
 URL: **https://nameless-stream-83169.herokuapp.com/**
 
@@ -25,14 +25,14 @@ The following **optional** features are implemented:
 * [X] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/. 
 * [X] User can see how many views a post has. 
 * [X] User can leave a comment on a post.
-* [ ] User can add "tags" to a post, and filter posts by tag. 
+* [X] User can add "tags" to a post, and filter posts by tag. 
 
 The following **additional** features are implemented:
 
 - [X] Navigation on SideBar.
 - [X] User can see recent posts on left SideBar.
 - [X] Post has feature image.
-- [X] Comment can be deleted.
+- [X] Comment and tag can be deleted.
 
 ## Video Walkthrough 
 
