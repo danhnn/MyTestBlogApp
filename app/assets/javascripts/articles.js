@@ -32,7 +32,6 @@ function findBootstrapEnvironment() {
       $(".right-section").height($(".left-section").height());
       makeVerticalMenu();
     }else{
-    
       makeHorizontalMenu(); 
     }
   }
@@ -41,9 +40,9 @@ function findBootstrapEnvironment() {
  		setTimeout(
            function() 
            {
-              handleGridResize();
-
-           }, 1000);
+              //handleGridResize();
+              $(window).resize();
+           }, 200);
   }
 
   function createDummyPost(){
@@ -80,7 +79,7 @@ function findBootstrapEnvironment() {
 
   var ready;
   ready = function() {
-     gridResizeForRefresh();
+       gridResizeForRefresh();
 
       $( window ).resize(function() {
         handleGridResize();
