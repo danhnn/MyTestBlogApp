@@ -7,6 +7,8 @@ class ArticlesController < ApplicationController
     # @articles = Article.all
     if params[:search]
       @articles = Article.search(params[:search]).order("created_at DESC")
+    elsif params[:tag]
+      @articles = Article.searchByTag(params[:tag]).order("created_at DESC")
     else
       @articles = Article.order("created_at DESC")
     end

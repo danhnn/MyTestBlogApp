@@ -1,9 +1,6 @@
 
-  <p>
-    <%= tag.key %>
-  </p>
- <p>
-  <%= link_to 'Destroy Tag', [tag.article, tag],
+<%= link_to tag.key, {:controller => "articles", :action => "index", :tag => tag.key},class: "tag-key" %>          
+
+ <%= link_to 'Delete', [tag.article, tag],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+               data: { confirm: 'Are you sure?' },class: "tag-delete" %>
