@@ -43,7 +43,7 @@ function findBootstrapEnvironment() {
            {
               handleGridResize();
 
-           }, 400);
+           }, 1000);
   }
 
   function createDummyPost(){
