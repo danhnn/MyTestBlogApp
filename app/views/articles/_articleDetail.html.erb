@@ -10,7 +10,15 @@
       <p class="row" style='color:gray'>Views: <%= @article.hit %></p>
 
       <div class="row"><p><%= @markdown.render(@article.body).html_safe %></p></div>
-            
+      
+      <div class="row">
+        
+        <h2>Tags:</h2>
+<%= render @article.tags %>
+ 
+<%= render 'tags/form' %>
+      </div>         
+
 	  <%= link_to 'Back', articles_path, class: "row btn btn-info" %>
 
 <div class="row">
