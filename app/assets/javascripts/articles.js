@@ -42,7 +42,7 @@ function findBootstrapEnvironment() {
            {
               //handleGridResize();
               $(window).resize();
-           }, 200);
+           }, 400);
   }
 
   function createDummyPost(){
